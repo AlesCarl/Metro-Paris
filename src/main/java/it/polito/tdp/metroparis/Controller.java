@@ -34,6 +34,7 @@ public class Controller {
     	Fermata arrivo = boxArrivo.getValue() ;
     	
     	if(partenza!=null && arrivo!=null && !partenza.equals(arrivo)) {
+    		
     		List<Fermata> percorso = model.percorso(partenza, arrivo) ;
     		txtResult.setText("Percorso tra "+partenza.getNome()+" e "+arrivo.getNome()+"\n\n");
     		for(Fermata f: percorso) {
